@@ -46,7 +46,7 @@ def compute_score(width, t_k, tt_k):
         
         # get time stamps of membership functions (pulse trains)
         dt      = width/50
-        t_lower = min(min(t_k), min(tt_k)) + width     
+        t_lower = min(min(t_k), min(tt_k)) - width     
         t_upper = max(max(t_k), max(tt_k)) + width         
         t       = np.arange(t_lower, t_upper, dt)
         t_len   = len(t)
